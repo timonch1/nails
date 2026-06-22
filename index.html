@@ -479,7 +479,7 @@
 <div class="mobile-drawer" id="mobile-drawer">
 
   <div class="mobile-nav-item">
-    <div class="mobile-nav-link" onclick="navGo('news')" id="mnav-news">Новини</div>
+    <div class="mobile-nav-link" onclick="navGo('news')"><span id="mnav-news">Новини</span></div>
   </div>
 
   <div class="mobile-nav-item">
@@ -487,9 +487,9 @@
       <span id="mnav-participants">Учасники</span><span class="arrow">▾</span>
     </div>
     <div class="mobile-submenu" id="sub-participants">
-      <a onclick="navGo('judges')" id="mdd-judges">⚖️ Судді</a>
-      <a onclick="navGo('coaches')" id="mdd-coaches">🎓 Тренери</a>
-      <a onclick="navGo('masters')" id="mdd-masters">💅 Майстри</a>
+      <a onclick="navGo('judges')"><span id="mdd-judges">⚖️ Судді</span></a>
+      <a onclick="navGo('coaches')"><span id="mdd-coaches">🎓 Тренери</span></a>
+      <a onclick="navGo('masters')"><span id="mdd-masters">💅 Майстри</span></a>
     </div>
   </div>
 
@@ -498,8 +498,8 @@
       <span id="mnav-events">Заходи</span><span class="arrow">▾</span>
     </div>
     <div class="mobile-submenu" id="sub-events">
-      <a onclick="navGo('championships')" id="mdd-champ">🏆 Чемпіонати</a>
-      <a onclick="navGo('conferences')" id="mdd-conf">📋 Конференції</a>
+      <a onclick="navGo('championships')"><span id="mdd-champ">🏆 Чемпіонати</span></a>
+      <a onclick="navGo('conferences')"><span id="mdd-conf">📋 Конференції</span></a>
     </div>
   </div>
 
@@ -508,16 +508,16 @@
       <span id="mnav-union">Спілка</span><span class="arrow">▾</span>
     </div>
     <div class="mobile-submenu" id="sub-union">
-      <a onclick="navGo('docs')" id="mdd-docs">📄 Документація</a>
-      <a onclick="navGo('membership')" id="mdd-member">✍️ Умови вступу</a>
-      <a onclick="navGo('stats')" id="mdd-stats">📊 Статистика</a>
-      <a onclick="navGo('contacts')" id="mdd-contacts">📍 Контакти</a>
+      <a onclick="navGo('docs')"><span id="mdd-docs">📄 Документація</span></a>
+      <a onclick="navGo('membership')"><span id="mdd-member">✍️ Умови вступу</span></a>
+      <a onclick="navGo('stats')"><span id="mdd-stats">📊 Статистика</span></a>
+      <a onclick="navGo('contacts')"><span id="mdd-contacts">📍 Контакти</span></a>
     </div>
   </div>
 
   <div class="mobile-lang">
-    <button class="lang-btn active" id="mbtn-uk" onclick="setLang('uk'); updateMobileLang('uk')">UA</button>
-    <button class="lang-btn" id="mbtn-en" onclick="setLang('en'); updateMobileLang('en')">EN</button>
+    <button class="lang-btn active" id="mbtn-uk" onclick="setLang('uk')">UA</button>
+    <button class="lang-btn" id="mbtn-en" onclick="setLang('en')">EN</button>
   </div>
 
 </div>
@@ -944,8 +944,13 @@ let lang = 'uk';
 
 function setLang(l) {
   lang = l;
+  // десктоп кнопки
   document.getElementById('btn-uk').classList.toggle('active', l === 'uk');
   document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  // мобільні кнопки
+  document.getElementById('mbtn-uk').classList.toggle('active', l === 'uk');
+  document.getElementById('mbtn-en').classList.toggle('active', l === 'en');
+  // переклад всіх елементів
   const t = T[l];
   for (const [id, val] of Object.entries(t)) {
     const el = document.getElementById(id);
@@ -985,11 +990,6 @@ function toggleSub(id, btn) {
 function navGo(page) {
   showPage(page);
   closeDrawer();
-}
-
-function updateMobileLang(l) {
-  document.getElementById('mbtn-uk').classList.toggle('active', l === 'uk');
-  document.getElementById('mbtn-en').classList.toggle('active', l === 'en');
 }
 </script>
 </body>
