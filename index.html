@@ -434,7 +434,7 @@
 <nav>
   <a class="logo" onclick="showPage('home'); closeDrawer();">
     <div class="logo-gem"></div>
-    <span id="logo-text">Magic</span>
+    <span style="color:var(--gold); font-size:18px; font-weight:bold; letter-spacing:1px;">MAGIC PRO NAIL</span>
   </a>
   <ul class="nav-links">
     <li class="nav-item">
@@ -527,7 +527,10 @@
   <div class="hero">
     <div class="hero-content">
       <p class="hero-eyebrow" id="h-eyebrow">Всеукраїнський чемпіонат · Київ 2026</p>
-      <h1 class="hero-title" id="h-title">Magic Pro Nail</h1>
+      <h1 class="hero-title">
+        <span style="display:block; font-size:clamp(60px,14vw,130px); font-weight:900; letter-spacing:8px; line-height:1; background:linear-gradient(135deg,#fff 20%,var(--gold-light) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">MAGIC</span>
+        <span style="display:block; font-size:clamp(16px,3vw,26px); letter-spacing:6px; color:var(--gold); font-family:'Arial',sans-serif; text-transform:uppercase; margin-top:4px;">Pro Nail</span>
+      </h1>
       <p class="hero-sub" id="h-sub">Організовуємо чемпіонати, конференції та заходи<br>для майстрів манікюру по всій Україні</p>
       <div class="hero-btns">
         <button class="btn-gold" id="h-cta1" onclick="window.open('https://magicpronail.event.net.ua','_blank')">Зареєструватись</button>
@@ -551,7 +554,7 @@
     </div>
     <div class="cards-grid">
       <div class="card" onclick="showPage('news')">
-        <div class="card-img">🏆</div>
+        <img src="champion_poster.jpg" alt="Magic Pro Nail 2026" style="width:100%; border-radius:2px; margin-bottom:1rem; display:block;">
         <div class="card-tag" id="ct1">Чемпіонат</div>
         <div class="card-title" id="cn1">IX Всеукраїнський чемпіонат Magic Pro Nail 2026</div>
         <div class="card-text" id="cd1">Реєстрацію відкрито! 7 жовтня 2026, Київ, ГРХ «Верховина». Остання Золота Фреза в історії Magic Pro Nail.</div>
@@ -586,7 +589,7 @@
 
     <!-- НОВИНА 1 — розгорнута -->
     <div class="card" style="margin-bottom:20px; cursor:default;">
-      <div class="card-img">🏆</div>
+      <img src="champion_poster.jpg" alt="Magic Pro Nail 2026" style="width:100%; border-radius:2px; margin-bottom:1rem; display:block;">
       <div class="card-tag">Чемпіонат</div>
       <div class="card-title">📢 Відкриття реєстрації — Magic Pro Nail 2026</div>
       <div class="card-text" style="margin-top:0.75rem; line-height:1.8;">
@@ -874,14 +877,14 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2025 <strong>Українська Спілка Nail-Майстрів</strong> · Всі права захищені</p>
+  <p>© 2026 <strong>Magic Pro Nail</strong> · Всі права захищені</p>
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
 const T = {
   uk: {
-    'logo-text': 'NAIL UNION',
+    'logo-text': 'MAGIC PRO NAIL',
     'nav-news': 'Новини',
     'nav-participants': 'Учасники ▾',
     'nav-events': 'Заходи ▾',
@@ -895,16 +898,16 @@ const T = {
     'dd-member': '✍️ Умови вступу',
     'dd-stats': '📊 Статистика',
     'dd-contacts': '📍 Контакти',
-    'h-eyebrow': 'Офіційна федерація · Україна',
-    'h-title': 'Українська Спілка<br>Nail-Майстрів',
-    'h-sub': 'Організовуємо чемпіонати, конференції та турніри<br>для майстрів манікюру по всій Україні',
-    'h-cta1': 'Стати учасником',
+    'h-eyebrow': 'Всеукраїнський чемпіонат · Київ 2026',
+    'h-subtitle': 'Pro Nail',
+    'h-sub': 'Організовуємо чемпіонати, конференції та заходи<br>для майстрів манікюру по всій Україні',
+    'h-cta1': 'Зареєструватись',
     'h-cta2': 'Найближчі події',
     's1':'Учасників','s2':'Турнірів','s3':'Регіонів','s4':'Років',
-    'latest-eyebrow':'Останні новини','latest-title':'Що нового у спілці',
-    'ct1':'Чемпіонат','cn1':'VII Відкритий чемпіонат України з нейл-арту','cd1':'Приймаємо заявки. Категорії: класичний, гель, акрил, 3D-дизайн.',
-    'ct2':'Результати','cn2':'Підсумки осіннього кубку 2025','cd2':'Переможці у 6 категоріях. Гран-прі — майстер із Львова.',
-    'ct3':'Спілка','cn3':'Нові умови вступу 2026','cd3':'Оновлено вимоги до кваліфікації та документів.',
+    'latest-eyebrow':'Останні новини','latest-title':'Що нового у Magic Pro Nail',
+    'ct1':'Чемпіонат','cn1':'IX Всеукраїнський чемпіонат Magic Pro Nail 2026','cd1':'Реєстрацію відкрито! 7 жовтня 2026, Київ, ГРХ «Верховина». Остання Золота Фреза в історії Magic Pro Nail.',
+    'ct2':'Подія','cn2':'День майстра манікюру 2025','cd2':'Масштабна подія, яка об\'єднала майстрів, інструкторів та керівників шкіл з усієї України.',
+    'ct3':'Реєстрація','cn3':'Зареєструйся на Magic Pro Nail 2026','cd3':'Перевір свої навички, отримай незалежну оцінку суддів та стань частиною професійної спільноти.',
     'news-eyebrow':'Медіа','news-title':'Новини',
     'judges-eyebrow':'Учасники','judges-title':'Судді спілки',
     'coaches-eyebrow':'Учасники','coaches-title':'Тренери спілки',
@@ -928,7 +931,7 @@ const T = {
     'mdd-docs':'📄 Документація','mdd-member':'✍️ Умови вступу','mdd-stats':'📊 Статистика','mdd-contacts':'📍 Контакти'
   },
   en: {
-    'logo-text': 'NAIL UNION',
+    'logo-text': 'MAGIC PRO NAIL',
     'nav-news': 'News',
     'nav-participants': 'Participants ▾',
     'nav-events': 'Events ▾',
@@ -942,16 +945,16 @@ const T = {
     'dd-member': '✍️ Membership',
     'dd-stats': '📊 Statistics',
     'dd-contacts': '📍 Contacts',
-    'h-eyebrow': 'Official Federation · Ukraine',
-    'h-title': 'Ukrainian Nail<br>Masters Union',
-    'h-sub': 'Organizing championships, conferences and tournaments<br>for nail professionals across Ukraine',
-    'h-cta1': 'Join Us',
+    'h-eyebrow': 'All-Ukrainian Championship · Kyiv 2026',
+    'h-subtitle': 'Pro Nail',
+    'h-sub': 'We organize championships, conferences and events<br>for nail professionals across Ukraine',
+    'h-cta1': 'Register Now',
     'h-cta2': 'Upcoming Events',
     's1':'Members','s2':'Tournaments','s3':'Regions','s4':'Years',
-    'latest-eyebrow':'Latest news','latest-title':"What's new in the union",
-    'ct1':'Championship','cn1':'VII Open Ukraine Nail Art Championship','cd1':'Registration open. Categories: classic, gel, acrylic, 3D design.',
-    'ct2':'Results','cn2':'Autumn Cup 2025 Results','cd2':'Winners in 6 categories. Grand Prix — master from Lviv.',
-    'ct3':'Union','cn3':'New 2026 Membership Conditions','cd3':'Updated qualification requirements and document list.',
+    'latest-eyebrow':'Latest news','latest-title':"What's new at Magic Pro Nail",
+    'ct1':'Championship','cn1':'IX All-Ukrainian Championship Magic Pro Nail 2026','cd1':'Registration open! October 7, 2026, Kyiv, GRH «Verkhovina». The last Golden Drill in Magic Pro Nail history.',
+    'ct2':'Event','cn2':'Nail Master Day 2025','cd2':'A large-scale event that united masters, instructors and school directors from all over Ukraine.',
+    'ct3':'Registration','cn3':'Register for Magic Pro Nail 2026','cd3':'Test your skills, get independent judge feedback and become part of the professional community.',
     'news-eyebrow':'Media','news-title':'News',
     'judges-eyebrow':'Participants','judges-title':'Union Judges',
     'coaches-eyebrow':'Participants','coaches-title':'Union Coaches',
