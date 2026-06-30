@@ -213,6 +213,30 @@
   .participant-role { font-size: 12px; color: var(--gold); font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
   .participant-region { font-size: 12px; color: var(--text2); margin-top: 4px; font-family: 'Arial', sans-serif; }
 
+  /* JUDGE CARDS */
+  .judges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+  .judge-card {
+    background: var(--card); border: 1px solid rgba(107,33,168,0.3);
+    border-top: 2px solid var(--gold);
+    padding: 1.5rem; text-align: center; transition: all 0.3s;
+  }
+  .judge-card:hover { border-color: rgba(234,179,8,0.5); transform: translateY(-2px); }
+  .judge-photo {
+    width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+    margin: 0 auto 1rem; display: block; border: 2px solid var(--gold);
+  }
+  .judge-avatar-empty {
+    width: 120px; height: 120px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--gold));
+    margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+  }
+  .judge-name { font-size: 17px; margin-bottom: 4px; color: var(--text); }
+  .judge-meta { font-size: 12px; color: var(--gold); font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .judge-role { font-size: 13px; color: var(--gold-light); font-family: 'Arial', sans-serif; margin-bottom: 10px; }
+  .judge-bio { font-size: 13px; color: var(--text2); font-family: 'Arial', sans-serif; line-height: 1.6; text-align: left; }
+  .judge-insta { font-size: 12px; color: var(--purple-light); font-family: 'Arial', sans-serif; margin-top: 10px; display: inline-block; }
+
   /* EVENTS */
   .events-list { display: flex; flex-direction: column; gap: 16px; }
   .event-item {
@@ -644,13 +668,81 @@
       <h2 class="section-title" id="judges-title">Судді спілки</h2>
       <div class="section-line"></div>
     </div>
-    <div class="participants-grid">
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Олена Мороз</div><div class="participant-role">Головний суддя</div><div class="participant-region">📍 Київ</div></div>
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Наталія Сидоренко</div><div class="participant-role">Суддя І категорії</div><div class="participant-region">📍 Львів</div></div>
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Марина Власенко</div><div class="participant-role">Суддя І категорії</div><div class="participant-region">📍 Одеса</div></div>
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Тетяна Іванова</div><div class="participant-role">Суддя ІІ категорії</div><div class="participant-region">📍 Харків</div></div>
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Людмила Петрова</div><div class="participant-role">Суддя ІІ категорії</div><div class="participant-region">📍 Дніпро</div></div>
-      <div class="participant-card"><div class="participant-avatar">⚖️</div><div class="participant-name">Ірина Козак</div><div class="participant-role">Суддя ІІ категорії</div><div class="participant-region">📍 Запоріжжя</div></div>
+    <div class="judges-grid">
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_platonova.jpg" alt="Антоніна Платонова">
+        <div class="judge-name">Платонова Антоніна Василівна</div>
+        <div class="judge-meta">м. Одеса / Київ</div>
+        <div class="judge-role">Президент спілки підприємців та майстрів сфери краси України, засновник чемпіонату Magic Pro Nail</div>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_yarych.jpg" alt="Марія Ярич">
+        <div class="judge-name">Марія Ярич</div>
+        <div class="judge-role">Головний суддя технічних номінацій</div>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_dydykalo.jpg" alt="Віра Дидикало">
+        <div class="judge-name">Дидикало Віра Володимирівна</div>
+        <div class="judge-meta">24.04.1991 · м. Брусилів</div>
+        <div class="judge-role">Головний суддя творчих номінацій Magic Pro Nail</div>
+        <div class="judge-bio">Призерка чемпіонатів Європи та світу, володарка Кубка Гран-прі, багаторазова переможниця та призерка міжнародних чемпіонатів в Україні, Європі та країнах Азії. Авторка унікальних креативних нейл-образів і fashion-проєктів у сфері нейл-стилістики. Інструкторка базових та професійних курсів з моделювання нігтів, створення 3D-композицій і конкурсних креативних образів. Спеціалізується на розвитку творчого потенціалу майстрів, поєднуючи технічну майстерність, художнє бачення та сучасні тренди нейл-індустрії.</div>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_prykhodko.jpg" alt="Олександра Приходько">
+        <div class="judge-name">Олександра Приходько</div>
+        <div class="judge-role">Майстер та інструктор нігтьового сервісу</div>
+        <div class="judge-bio">Майстер та інструктор нігтьового сервісу з 15-річним досвідом. Засновниця студії краси у Миколаєві та власниця магазину професійних матеріалів для майстрів. Багаторазова призерка міжнародних чемпіонатів. Спеціалізується на моделюванні нігтів у техніці вкладного френча та художньому розписі гель-лаками, поєднуючи високу технічну майстерність і творчий підхід.</div>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_botsiura.jpg" alt="Яна Боцюра">
+        <div class="judge-name">Боцюра Яна Валеріївна</div>
+        <div class="judge-meta">09.04.1986 · м. Кривий Ріг</div>
+        <div class="judge-role">Практикуючий майстер манікюру та суддя чемпіонату</div>
+        <div class="judge-bio">Об'єктивність, професіоналізм, креативність і любов до своєї справи — головні принципи.</div>
+        <a class="judge-insta" href="https://instagram.com/botsiura_nail_kr" target="_blank">@botsiura_nail_kr</a>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_bielova.jpg" alt="Оксана Бєлова">
+        <div class="judge-name">Бєлова Оксана Андріївна</div>
+        <div class="judge-meta">03.10.1992 · м. Біла Церква</div>
+        <div class="judge-role">Засновниця школи-студії Divine Nail Studio</div>
+        <div class="judge-bio">Практикуючий майстер нігтьової естетики з 2010 року, сертифікований інструктор сучасних технік манікюру, моделювання нігтів та педикюру. Засновниця та керівниця школи-студії Divine Nail Studio, де навчає майстрів як в офлайн, так і в онлайн форматі, допомагаючи їм удосконалювати професійні навички та досягати нових висот. Багаторазова призерка українських та міжнародних чемпіонатів у форматі офлайн, спікерка професійних марафонів та експертка, яка щодня поєднує практику, навчання й розвиток індустрії.</div>
+      </div>
+
+      <div class="judge-card">
+        <div class="judge-avatar-empty">⚖️</div>
+        <div class="judge-name">Дзвиняк Тетяна Анатоліївна</div>
+      </div>
+
+      <div class="judge-card">
+        <div class="judge-avatar-empty">⚖️</div>
+        <div class="judge-name">Олійник Альона Олександрівна</div>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_kysil.jpg" alt="Ніна Кисіль">
+        <div class="judge-name">Кисіль Ніна Сергіївна</div>
+        <div class="judge-meta">22.05.1992 · м. Одеса</div>
+        <div class="judge-role">Акредитований інструктор</div>
+        <div class="judge-bio">Чемпіонка та призерка професійних чемпіонатів. Людина, яка не просто навчає технікам та майстерності, а допомагає повірити у власні сили, розкрити потенціал і зробити впевнений крок до успіху!</div>
+        <a class="judge-insta" href="https://instagram.com/nails_nk_ninel" target="_blank">@nails_nk_ninel</a>
+      </div>
+
+      <div class="judge-card">
+        <img class="judge-photo" src="images/judge_shovgur.jpg" alt="Мар'яна Шовгур">
+        <div class="judge-name">Шовгур Мар'яна Вікторівна</div>
+        <div class="judge-meta">11.07.1988 · м. Хмельницький</div>
+        <div class="judge-role">Майстер манікюру та інструктор</div>
+        <div class="judge-bio">Майстер манікюру з 14-річним досвідом та інструктор. Неодноразова переможниця всеукраїнських, міжнародних чемпіонатів та Чемпіонату Світу Viridiland. Володарка двох Гран-прі та Золотої фрези Magic Pro Nail. Її креативність та досвід втілюються у неймовірних роботах з інкрустації та креативного моделювання.</div>
+        <a class="judge-insta" href="https://www.instagram.com/mariana_shovgur_nails" target="_blank">@mariana_shovgur_nails</a>
+      </div>
+
     </div>
   </div>
 </div>
